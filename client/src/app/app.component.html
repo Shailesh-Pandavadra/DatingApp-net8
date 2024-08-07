@@ -1,0 +1,21 @@
+<h1>{{title}}</h1>
+
+<!-- Structural Directives *ngFor -->
+ <!-- Structural Directives start from (*) asterisk sign -->
+<!-- Approach 1. -->
+<!-- <ul>
+    <li *ngFor="let user of users">
+        {{user.id}} - {{user.userName}}
+    </li>
+</ul> -->
+
+
+<!-- Approach 2. -->
+<ul>
+    <!-- @for (user of users; track $index) { -->
+    @for (user of users; track user.id) {
+        <li>
+            {{user.id}} - {{user.userName}}
+        </li>
+    }
+</ul>
